@@ -1,0 +1,96 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Movies</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<nav class="navbar navbar-expand-lg">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon">Movies</span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <div class="movieButtons">
+              <button type="button" value="Batman" onclick="button(this)" class="active btn navigationButtons">Batman</button>
+              <button type="button" value="Superman" onclick="button(this)" class="btn navigationButtons">Superman</button>
+              <button type="button" value="Avengers" onclick="button(this)" class="btn navigationButtons">Avengers</button>
+              <button type="button" value="Black Panther" onclick="button(this)" class="btn navigationButtons">Black Panther</button>
+              <button type="button" value="Thor" onclick="button(this)" class="btn navigationButtons">Thor</button>
+              <button type="button" value="Hulk" onclick="button(this)" class="btn navigationButtons">Hulk</button>
+              <button type="button" value="Captain America" onclick="button(this)" class="btn navigationButtons">Captain America</button>
+          </div>
+        </div>
+    </div>
+    <div class="form-inline">
+      <input class="form-control mr-sm-2 searchInput" type="search" placeholder="Search" aria-label="Search">
+    </div>
+</nav>
+
+<body>
+    <div>
+        <div id="app">
+            <div id="appBackground"></div>
+
+            <nav class="navbar navbar-expand-lg">
+              <div class="navbar-collapse" id="navbarNavAltMarkup">
+                  <div class="navbar-nav">
+                    <div class="chooseButtons">
+                      <button type="button" value="Cards" onclick="$('#myTable').hide(300); $('.container-cards').show(300)" class="active2 btn display-cards-button displayButtons">Display Cards</button>
+                      <button type="button" value="Table" onclick="$('#myTable').show(300); $('.container-cards').hide(300)" class="btn display-table-button displayButtons">Display Table</button>
+                    </div>
+                  </div>
+              </div>
+                <div class="form-inline sorting-divs">
+                  <div class="sort-date">
+                  <label>Sort by year</label>
+                  <button type="button" onClick="arrangeDate()" class="btn sortingButtons active3"><i class="fas fa-angle-double-down"></i></button>
+                  <button type="button" onClick="arrangeDate2()" class="btn sortingButtons"><i class="fas fa-angle-double-up"></i></button>
+                </div>
+                <div class="sort-title">
+                  <label>Sort by title</label>
+                  <button type="button" onClick="arrangeTitle()" class="btn sortingButtons"><i class="fas fa-angle-double-down"></i></button>
+                  <button type="button" onClick="arrangeTitle2()" class="btn sortingButtons"><i class="fas fa-angle-double-up"></i></button>
+                </div>
+              </div>
+            </div>
+          </nav>
+
+            <table class="table table-dark" id="myTable" style="display: none">
+                <thead>
+                    <tr>
+                        <th scope="col">Poster</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Year</th>
+                    </tr>
+                </thead>
+                <tbody id="appTable">
+
+                </tbody>
+            </table>
+
+            <div class="jumbotron movie-container container-cards" style="display: none;"></div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script>
+            window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')
+        </script>
+        <script src="js/main.js"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
