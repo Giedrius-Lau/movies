@@ -13,7 +13,7 @@ sortingbtns = $(".sortingButtons");
 
 
 getInfo(movies);
-arrangeDate();
+
 
 function button(objButton){
     getInfo(objButton.value)
@@ -79,9 +79,11 @@ function getInfo(movieTitle) {
     if($myTable.css('display') !== "none"){
       $containerCards.hide(300)
     }
-
+    arrangeDate();
   })
 }
+
+
 
 
 
